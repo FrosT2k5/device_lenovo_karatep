@@ -31,7 +31,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.hwui.text_large_cache_height=1024
 
 # Call the proprietary setup
-$(call inherit-product, vendor/lenovo/karatep/montana-vendor.mk)
+$(call inherit-product, vendor/lenovo/karatep/karatep-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -189,8 +189,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gps.default \
     libgnsspps
-    gps.msm8937
-    
+        
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/etc/flp.conf:system/etc/flp.conf \
     $(LOCAL_PATH)/configs/gps/etc/gps.conf:system/etc/gps.conf \

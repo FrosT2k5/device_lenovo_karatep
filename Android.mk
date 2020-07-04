@@ -17,8 +17,8 @@ ifneq ($(filter karatep,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 
-include device/karatep/karatep/tftp.mk
-include device/karatep/karatep/expat.mk
+include device/lenovo/karatep/tftp.mk
+include device/lenovo/karatep/expat.mk
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
