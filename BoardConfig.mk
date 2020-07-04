@@ -20,8 +20,7 @@ DEVICE_PATH := device/lenovo/karatep
 
 BOARD_VENDOR := lenovo-qcom
 
-#TODO: What is this:
-#TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 # Enable dexpreopt to speed boot time
 #WITH_DEXPREOPT := true
@@ -126,13 +125,12 @@ BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_NO_CHARGER_LED := true
 
-#TODO:
 # CMHW
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS += hardware/cyanogen/cmhw
 BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/cmhw
 
-#TODO:
+
 # CNE / DPM
 BOARD_USES_QCNE := true
 
@@ -168,16 +166,14 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
 BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 3758096384
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 26302463488
 
-#TODO:
 # FM
 BOARD_HAVE_QCOM_FM := true
 
-#TODO:
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_montana
-TARGET_RECOVERY_DEVICE_MODULES := libinit_montana
 
-#TODO:
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_karatep
+TARGET_RECOVERY_DEVICE_MODULES := libinit_karatep
+
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
 

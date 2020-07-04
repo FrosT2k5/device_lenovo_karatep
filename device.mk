@@ -16,7 +16,6 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-#TODO: WHAT IS THIS
 # Dalvik/HWUI configs
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.texture_cache_size=72 \
@@ -41,7 +40,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_AAPT_CONFIG := normal
 
-#TODO: What the heck is this
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
@@ -75,7 +73,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.webview.xml:system/etc/permissions/android.software.webview.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
-#todo
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
@@ -144,9 +141,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/s5k3p3_chromatix.xml:system/etc/camera/s5k3p3_chromatix.xml
 
 
-# CM
-PRODUCT_PACKAGES += \
-    MotoActions
 
 PRODUCT_PACKAGES += \
     Launcher3
@@ -212,7 +206,6 @@ PRODUCT_PACKAGES += \
     ipacm-diag \
     IPACM_cfg.xml   
 
-#TODO: What?
 # IMS
 PRODUCT_PACKAGES += \
     libshim_ims
@@ -222,7 +215,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
 
-#TODO:
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
@@ -231,7 +223,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl \
     $(LOCAL_PATH)/keylayout/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl
 
-#TODO:
 # Media
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -262,8 +253,7 @@ PRODUCT_COPY_FILES += \
 # Lights
 PRODUCT_PACKAGES += \
     lights.msm8937
-    
-#TODO:    
+      
 # Nfc
 PRODUCT_PACKAGES += \
     libnfc-nci \
