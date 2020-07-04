@@ -1,0 +1,28 @@
+type mmi_boot, domain, domain_deprecated;
+type mmi_boot_exec, exec_type, file_type;
+init_daemon_domain(mmi_boot)
+
+# shell scripts need to execute /system/bin/sh
+allow mmi_boot shell_exec:file rx_file_perms;
+allow mmi_boot toolbox_exec:file rx_file_perms;
+
+allow mmi_boot radio_data_file:dir { add_name search write };
+allow mmi_boot radio_data_file:file { create setattr };
+allow mmi_boot radio_data_file:file rw_file_perms;
+allow mmi_boot self:capability chown;
+allow mmi_boot self:capability dac_override;
+allow mmi_boot sysfs_socinfo:file write;
+
+set_prop(mmi_boot, hw_rev_prop);
+
+# KS additions
+allow mmi_boot rootfs:file entrypoint;
+allow mmi_boot kmsg_device:chr_file rw_file_perms;
+allow mmi_boot proc:file rw_file_perms;
+allow mmi_boot persist_file:dir search;
+allow mmi_boot persist_file:file rw_file_perms;
+allow mmi_boot system_prop:property_service set;
+
+# Not allowed by domain.te
+#allow mmi_boot default_prop:property_service set;
+
